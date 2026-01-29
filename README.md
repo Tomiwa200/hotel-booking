@@ -12,11 +12,12 @@ pnpm dev
 
 ## Features
 
+```
 Next-Auth Authentication
 Hotel List Page
 Hotel Booking Form
 Bookings Page
-
+```
 
 
 
