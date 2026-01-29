@@ -1,0 +1,12 @@
+
+.hotel-nav-link {
+  color: #f75053;
+ 
+ }  
+ .hotel-nav-link:hover {
+  color: #fff;
+  background-color: #f75053;
+  padding: 10px;
+  border-radius: 8px;
+   transition: 0.1s ease-in-out;
+ }

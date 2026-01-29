@@ -1,0 +1,14 @@
+import LogInForm from "../../ui/login-form";
+import "./style.css"
+
+  export default function LogIn() {
+    return(
+      <div className="p-20">
+          <h1 className="title text-2xl text-center font-bold mb-4">
+        Please LogIn To Continue
+      </h1>
+          <LogInForm />
+      </div>
+    )
+       
+  }

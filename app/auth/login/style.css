@@ -1,0 +1,15 @@
+
+.title, .label, .nav-text{
+    color: #f3c677;
+}
+
+.input-field {
+    background:  #f0f0f0;
+}
+
+.submit-btn{
+    background: #f75053;
+}
+.nav-link{
+    color: #f75053;
+}

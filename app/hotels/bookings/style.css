@@ -1,0 +1,21 @@
+
+.title{
+  color: #f3c677;
+}
+
+.title-text{
+  color: #f75053;
+}
+
+.remove-btn{
+  background-color: #f75053;
+  color: #fff;
+  border: none;
+  transition: 0.3s  ease-in-out;
+}
+
+.nav-btn{
+  background-color: #f75053;
+  color: #fff;
+  border: none;
+}

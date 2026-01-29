@@ -1,0 +1,24 @@
+
+.title, .label{
+    color: #f3c677;
+}
+
+.input-field {
+    background:  #f0f0f0;
+}
+.form-btn-cancel {
+    background: #fff;
+    color: #333;
+    border: 1px solid #333;
+}
+.form-btn-cancel:hover{
+    background-color: #f75053;
+    color: #fff;
+    border: none;
+   transition: 0.3s  ease-in-out;
+}
+.form-btn{
+    background: #f75053;
+    color: #fff;
+    transition: 0.5s ease-in-out;
+}

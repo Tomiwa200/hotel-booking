@@ -24,3 +24,29 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+/* 6e0d25 FF4D80 */
+ .brand .text-1{
+    color: #ff3e41;
+ }
+ .brand .text-2{
+  color: #f3c677;
+ }
+ .nav-links {
+  color: #f3c677;
+ }
+ .nav-links:hover {
+  color: #fff;
+  background-color: #f3c677;
+  padding: 6px;
+  border-radius: 8px;
+  transition: 0.1s ease-in-out; 
+ }
+ .welcome-text h1{
+    color: #F3C677;
+}
+.welcome-text .btn {
+    background: #f75053;
+}
+.reset-btn{
+  background: #f75053;
+}
