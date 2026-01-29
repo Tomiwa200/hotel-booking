@@ -5,8 +5,8 @@ This is a Hotel Booking Website built with Nextjs .
 First, run the development server:
 
 ```bash
-pnpm install
-pnpm dev
+pnpm install- to install node modules
+pnpm dev - to open project on browser
 
 ```
 
@@ -18,6 +18,3 @@ Hotel List Page
 Hotel Booking Form
 Bookings Page
 ```
-
-
-
