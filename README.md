@@ -1,4 +1,4 @@
-This is a Hotel Booking Website built with Nextjs .
+This is an Hotel Booking Website built with Nextjs .
 
 ## Getting Started
 
