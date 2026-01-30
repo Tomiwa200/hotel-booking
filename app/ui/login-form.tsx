@@ -9,7 +9,7 @@ import Link from "next/link";
 
 export default function LogInForm() {
   const searchParams = useSearchParams();
-  const callbackUrl = searchParams.get("callbackUrl") || "";
+  const callbackUrl = searchParams.get("callbackUrl") || "/hotels";
   const [errorMessage, formAction, isPending] = useActionState(
     authenticate,
     undefined,
