@@ -13,6 +13,17 @@ export async function fetchHotelList() {
   }
 }
 
+export async function fetchFeaturedHotels() {
+  try {
+    const hotels = await sql<Hotel[]>`SELECT * FROM hotels ORDER BY name DESC LIMIT 4`;
+    return hotels; 
+  } catch (error) {
+    console.error("Database Error:", error);
+    throw new Error("Failed to fetch featured hotels.");
+  }
+ 
+}
+
 export async function fetchHotelById(hotel_id: string) {
   try {
     const hotel = await sql<SingleHotel[]>`SELECT  

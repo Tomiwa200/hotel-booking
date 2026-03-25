@@ -19,8 +19,8 @@ export default async function Navbar() {
         </div>
        
         <div className="space-x-4 menu hidden md:block">
-          <Link href="/hotels" className="nav-links text-xl font-medium">Hotels</Link>
-          <Link href="/hotels/bookings" className="nav-links text-xl font-medium">Bookings</Link>
+          <Link href="/hotels" className="nav-links text-lg font-bold">Hotels</Link>
+          <Link href="/hotels/bookings" className="nav-links text-lg font-bold">Bookings</Link>
           {user ? (
             <form className="inline-block" 
              action={async () => {
@@ -28,10 +28,10 @@ export default async function Navbar() {
             await signOut({ redirectTo: '/' });
           }}
             >
-            <button type="submit" className="nav-links text-xl font-medium">Logout</button>
+            <button type="submit" className="nav-links text-lg font-bold">Logout</button>
           </form>
           ):
-          <Link href="/auth/login" className="nav-links text-xl font-medium">Login</Link>
+          <Link href="/auth/login" className="nav-links text-lg font-bold">Login</Link>
           }
           
         </div>

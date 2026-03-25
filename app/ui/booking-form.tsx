@@ -20,13 +20,16 @@ export default function BookingForm({
    const [state, formAction, isPending] = useActionState(bookHotelWithUserId, initialState);
   return ( 
     <form action={formAction}>
-      <div className="border border-gray-100 p-6 rounded-lg  shadow-md">
+      <div className="form-title-box ">
+         <h2 className="text-3xl font-bold text-white my-6 text-center">Book Your Stay</h2>
+      </div>
+      <div className="p-10">
       <div className="mb-4">
-        <h4 className="label mb-2 block text-sm font-medium">Hotel Name</h4>
+        <h4 className="label block mb-2 text-lg font-bold">Hotel Name</h4> 
         <select
           id="hotel"
           name="hotelId"
-          className="peer block input-field w-full  cursor-pointer rounded-sm  py-2 pl-10 text-sm font-medium "
+          className="block input-field w-full cursor-pointer rounded-md py-4 pl-2 text-sm font-medium"
           defaultValue={hotel.id}
         >
           <option value={hotel.id}>
@@ -35,13 +38,13 @@ export default function BookingForm({
         </select>
       </div>
       <div className="mb-4">
-        <label htmlFor="room" className="label mb-2 block text-sm font-medium">
+        <label htmlFor="room" className="label block mb-2 text-lg font-bold"> 
           Choose a Room Type
         </label>
         <select
           id="room"
           name="roomId"
-          className="peer block w-full cursor-pointer rounded-md input-field py-2 pl-10 text-sm text-gray-600 "
+          className="peer block w-full cursor-pointer rounded-md input-field py-4 pl-2 text-sm text-gray-600 "
           defaultValue={""}
            aria-describedby="customer-error"
         >
@@ -65,26 +68,26 @@ export default function BookingForm({
       </div>
       </div>
       <div>
-        <label htmlFor="start_date" className=" label font-medium mb-2">
+        <label htmlFor="start_date" className=" label block text-lg font-bold mb-2">
           Start From
         </label>
         <input
           id="start_date"
           name="start_date"
           type="date"
-          className="w-full mb-2 text-gray-600  p-2 rounded-md input-field"
+          className="w-full mb-2 text-gray-600 py-4 px-2 rounded-md input-field"
           required
         />
       </div>
       <div>
-        <label htmlFor="end_date" className=" label font-medium mb-2">
+        <label htmlFor="end_date" className=" label block text-lg font-bold mb-2">
           Ends By
         </label>
         <input
           id="end_date"
           name="end_date"
           type="date"
-          className="w-full text-gray-600 p-2 rounded-md input-field"
+          className="w-full text-gray-600 py-4 px-2 rounded-lg input-field"
           required
         />
       </div>
@@ -92,13 +95,13 @@ export default function BookingForm({
       <div className="mt-6 flex justify-end gap-4">
         <Link
           href="/"
-          className="inline-block form-btn-cancel  mt-6 px-4 py-2 font-bold rounded-sm"
+          className="inline-block cancel-btn  mt-6 px-4 py-2 font-bold rounded-sm"
         >
           Cancel
         </Link>
         <button
           type="submit"
-          className="block form-btn mt-6 px-4 py-2 font-bold rounded-sm hover:opacity-60 aria-disabled:cursor-not-allowed aria-disabled:opacity-50 "
+          className="block confirm-btn mt-6 px-4 py-2 font-bold rounded-sm  aria-disabled:cursor-not-allowed aria-disabled:opacity-50 "
           aria-disabled={isPending}
         >
           Confirm

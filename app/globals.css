@@ -13,7 +13,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
+  c08826 :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
@@ -24,29 +24,177 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
-/* 6e0d25 FF4D80 */
- .brand .text-1{
-    color: #ff3e41;
- }
- .brand .text-2{
-  color: #f3c677;
- }
- .nav-links {
-  color: #f3c677;
- }
- .nav-links:hover {
+
+ /* header  */
+.brand .text-1 {
+  color: #464545;
+}
+.brand .text-2 {
+  color: #c08826;
+}
+.nav-links {
+  color: #04043d;
+}
+.nav-links:hover {
+  color: #c08826;
+  transition: 0.1s ease-in-out;
+}
+ 
+/* hero */
+.hero-section {
+  background-image:
+    linear-gradient(rgba(59, 46, 23, 0.5), rgb(59, 46, 23, 0.5)),
+    url("/hero-img.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.hero-text .btn {
+  background: #c08826;
+}
+.hero-text .btn:hover {
+  color: #c08826;
+  background: #fff;
+  transition: 0.3s ease-in-out;
+}
+.hero-bottom {
+  position: absolute;
+  bottom: -30%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.hero-bottom .column-1 {
+  background: #a18b64;
+}
+.hero-bottom .column-2 {
+  background:
+    linear-gradient(rgba(59, 46, 23, 0.5), rgb(59, 46, 23, 0.5)),
+    url("/hotelimage-4.avif");
+  background-position: center;
+  background-size: cover;
+}
+  /* featured hotels */
+.featured h2 {
+  color: #464545;
+}
+.featured-hotel .text-box .btn {
+  background: #c08826;
   color: #fff;
-  background-color: #f3c677;
-  padding: 6px;
-  border-radius: 8px;
-  transition: 0.1s ease-in-out; 
- }
- .welcome-text h1{
-    color: #F3C677;
 }
-.welcome-text .btn {
-    background: #f75053;
+.hotel-card .details-box .btn {
+  background-color: #c08826;
 }
-.reset-btn{
-  background: #f75053;
+
+.hotel-title {
+  color: #464545;
+}
+
+.hotel-details .book-btn {
+  background-color: #c08826;
+}
+.hotel-details .book-btn:hover {
+  background-color: #fff;
+  color: #c08826;
+  font-weight: 700;
+  transition: 0.3s ease-in-out;
+}
+.promo-banner {
+  background-image:
+    linear-gradient(rgba(59, 46, 23, 0.5), rgb(59, 46, 23, 0.5)),
+    url(/hotelimage-1.avif);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.promo-banner .btn {
+  background: #c08826;
+}
+.promo-banner .btn:hover {
+  color: #c08826;
+  background: #fff;
+  transition: 0.3s ease-in-out;
+}
+
+.testimonials h2 {
+  color: #464545;
+}
+.testimonials .col {
+  background-color: #a88850;
+}
+
+.label,
+.nav-text {
+  color: #464545;
+}
+.form-title-box {
+  background: #d9a640;
+  padding: 10px;
+  border-radius: 5px 5px 0 0;
+}
+.input-field {
+  background: #f0f0f0;
+}
+
+.submit-btn {
+  background: #d9a640;
+}
+.signup-link,
+.login-link {
+  color: #d9a640;
+}
+
+.cancel-btn {
+  background: #fff;
+  color: #464545;
+  border: 1px solid #333;
+}
+.cancel-btn:hover {
+  background-color: #c08826;
+  color: #fff;
+  border: none;
+  transition: 0.3s ease-in-out;
+}
+.confirm-btn {
+  background: #c08826;
+  color: #fff;
+}
+.confirm-btn:hover {
+  background-color: #fff;
+  color: #c08826;
+  transition: 0.3s ease-in-out;
+}
+.booking-card {
+  position: relative;
+}
+.bookings-header, .booking-title {
+  color: #e69d1f;
+}
+.remove-btn{
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  background-color: #c08826;
+  color: #fff;
+}
+.remove-btn:hover {
+  background-color: #fff;
+  color: #c08826;
+  transition: 0.3s ease-in-out;
+}
+.reset-btn {
+  background: #c08826;
+}
+.footer {
+  background-color: #a88850;
+}
+.footer .text-box {
+  margin: 50px auto 10%;
+}
+.footer h1 {
+  color: #464545;
+}
+.footer p {
+  color: #ededed;
 }

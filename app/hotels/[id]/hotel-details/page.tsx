@@ -1,5 +1,4 @@
 import Link from "next/link";
-import  "./style.css";
 import { fetchHotelById, fetchRoomsByHotelId } from "@/app/lib/data";
 import Image from "next/image";
 
@@ -19,14 +18,14 @@ export default async function HotelDetails(props: {params: Promise<{id : string 
 
   return ( 
      <>
-     <div  className="grid md:grid-cols-2 gap-8">
+     <div  className=" w-[80%] mx-auto py-20 grid md:grid-cols-2 gap-8">
        <img
         src={hotel.image_url}
         alt={hotel.name}
         className="rounded-lg"
       />
-      <div>
-        <h1 className=" title text-3xl font-bold">{hotel.name}</h1>
+      <div className="hotel-details">
+        <h1 className=" hotel-title text-3xl font-bold">{hotel.name}</h1>
         <p className="text-gray-600">{hotel.location}</p>
         <p className="mt-4 text-gray-600">{hotel.description}</p>
         <hr className="title"></hr> 
@@ -40,7 +39,7 @@ export default async function HotelDetails(props: {params: Promise<{id : string 
         ))}
         <Link
           href={`/hotels/${hotel_id}/booking-page`}
-          className="inline-block mt-6 nav-btn text-white px-6 py-3 font-bold rounded hover:opacity-60"
+          className=" book-btn inline-block mt-6 nav-btn text-white px-6 py-3 font-bold rounded"
         >
           Book Now
         </Link>

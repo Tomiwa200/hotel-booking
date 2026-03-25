@@ -1,6 +1,5 @@
 import { fetchBookingsByUserId } from "@/app/lib/data";
 import { auth } from "@/auth";
-import "./style.css";
 import { RemoveBookingButton } from "@/app/ui/remove-booking-btn";
 import Link from "next/link";
 
@@ -25,7 +24,7 @@ export default async function Bookings() {
       <div className="max-w-4xl mx-auto">
         {/* Header */}
         <div className="mb-12">
-          <h1 className=" title text-4xl font-bold text-gray-900">My Bookings</h1>
+          <h1 className=" bookings-header text-4xl font-bold text-gray-900">My Bookings</h1>
           <p className="text-gray-600 mt-1">
             Manage and view all your hotel reservations
           </p>
@@ -33,7 +32,7 @@ export default async function Bookings() {
         {bookings && bookings.length > 0 ? (
           <div className="grid gap-6">
             {bookings.map((booking) => (
-              <div className="bg-white rounded-lg shadow-lg ">
+              <div className="bg-white rounded-lg shadow-lg booking-card" key={booking.booking_id}>
                 <img
                   src={booking.image_url}
                   alt={booking.hotel_name}
@@ -41,15 +40,15 @@ export default async function Bookings() {
                 />
                 
                 <div className="p-4 mb-2">
-                <h2 className="title font-bold text-xl">{booking.hotel_name}</h2>
+                <h2 className="booking-title font-bold text-xl">{booking.hotel_name}</h2>
                 <p className=" font-bold text-gray-600 ">{booking.hotel_location}</p>
                </div>
               
-               <div className="room-container flex items-center gap-12">
+               <div className="room-container flex  items-center gap-12 mb-10">
                 <div className="p-4">
-                <p className=" title font-bold text-xl text-gray-600 ">{booking.room_name}</p>
-                <p className=" font-bold text-lg text-gray-600 "> Max Guests: {booking.room_max_guests}</p>
-                <p className="font-bold text-lg text-gray-600">Price: ${booking.room_price}/ Per night</p>
+                <p className=" booking-title font-bold text-xl  ">{booking.room_name}</p>
+                <p className=" font-bold  text-gray-600 "> Max Guests: {booking.room_max_guests}</p>
+                <p className="font-bold  text-gray-600">Price: ${booking.room_price}/ Per night</p>
                </div>
 
                <div className="details">
@@ -66,9 +65,9 @@ export default async function Bookings() {
                             })}</p>
                </div>
                </div>
-               <div className="p-4">
+               
                 <RemoveBookingButton id={booking.booking_id} />
-               </div>
+               
               </div>
             ))}
           </div>

@@ -10,8 +10,12 @@ export default function SignUpForm() {
 const [state, formAction, isPending] = useActionState(signUp, initialState);
     return(
         <form action={formAction}>
-      <div className="max-w-xl mx-auto border border-gray-100 p-6 rounded-lg  shadow-sm">
-        <div className="mb-4">
+      <div className="max-w-xl mx-auto border border-gray-100 rounded-lg  shadow-sm">
+        <div className="form-title-box block">
+          <h2 className=" text-3xl font-bold text-white mt-3 mb-6 text-center">Sign Up</h2>
+        </div>
+        <div className="input-fields p-4">
+          <div className="mb-4">
           <label htmlFor="email" className="block label text-lg font-medium">
             Email:
           </label>
@@ -51,9 +55,11 @@ const [state, formAction, isPending] = useActionState(signUp, initialState);
             required
           />
         </div>
+        </div>
+        
         <button
           type="submit"
-          className=" submit-btn block mt-8  w-50 px-2 py-2 text-xl mx-auto  text-white font-bold rounded aria-disabled:cursor-not-allowed aria-disabled:opacity-50"
+          className=" submit-btn block mt-4 w-50 px-2 py-2 text-xl mx-auto  text-white font-bold rounded aria-disabled:cursor-not-allowed aria-disabled:opacity-50"
           aria-disabled={isPending}
         >
           SignUp
@@ -63,7 +69,7 @@ const [state, formAction, isPending] = useActionState(signUp, initialState);
             <p className="mt-2 text-sm text-red-500" >
               {state.message}
             </p> )}
-           <p className="nav-text mt-6 text-center">Have an account? <Link href="/auth/login" className="ml-2 nav-link">LogIn</Link></p> 
+           <p className="nav-text mt-4 mb-4 text-center">Have an account? <Link href="/auth/login" className="ml-2 login-link hover:underline">LogIn</Link></p> 
        
       </div>
     </form>

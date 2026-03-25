@@ -5,7 +5,7 @@ export function RemoveBookingButton({ id }: { id: string }) {
  
   return (
     <form action={deleteBookingWithId}>
-      <button type="submit" className="remove-btn rounded-md border p-2  hover:opacity-60">
+      <button type="submit" className="remove-btn rounded-md border px-8 py-2  hover:opacity-60">
         Remove
       </button>
     </form>
