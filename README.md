@@ -28,7 +28,7 @@ This project is a functional webpage for a **Hotel Booking System** designed for
 * It manages user logins, sign-ups, and session security.
 
 **Supabase Database**
-*  A PostgreSQL database to store hotel and bookings data
+*  A PostgreSQL database to store users, hotel and bookings data
 
 
 ## Installation
