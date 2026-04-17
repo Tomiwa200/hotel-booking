@@ -1,6 +1,6 @@
 # Project Overview
 
-This project is a functional webpage for a **Hotel Booking System** designed for my portfolio
+This project is a functional webpage for a **Hotel Booking System** built for my portfolio
 
 **The system visually represents a platform where users can:**
 
