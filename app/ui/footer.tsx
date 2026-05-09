@@ -1,9 +1,9 @@
 export default function Footer() {
   return (
     <>
-      <div className="footer p-10 ">
-        <div className="text-box  w-[60%] ">
-          <h1 className="text-3xl font-bold  text-center">
+      <div className="footer p-10 w-full ">
+        <div className="text-box  sm:w-[60%] ">
+          <h1 className="text-2xl sm:text-3xl font-bold  text-center">
           HOTELBOOK
         </h1>
         <p className="mt-4  text-white text-center">
@@ -13,7 +13,7 @@ export default function Footer() {
         </p>
         </div>
         
-        <p className="copyright text-white text-center">
+        <p className="copyright text-white text-center mt-10">
           &copy; {new Date().getFullYear()} Hotel Booking. All rights reserved.
         </p>
       </div>

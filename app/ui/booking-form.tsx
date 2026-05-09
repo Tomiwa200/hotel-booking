@@ -21,7 +21,7 @@ export default function BookingForm({
   return ( 
     <form action={formAction}>
       <div className="form-title-box ">
-         <h2 className="text-3xl font-bold text-white my-6 text-center">Book Your Stay</h2>
+         <h2 className="text-2xl sm:text-3xl font-bold text-white py-2 sm:py-4 text-center">Book Your Stay</h2>
       </div>
       <div className="p-10">
       <div className="mb-4">

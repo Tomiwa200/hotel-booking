@@ -3,7 +3,7 @@ import { Suspense } from 'react';
 
   export default function LogIn() {
     return(
-      <div className="p-20">
+      <div className="flex justify-center items-center h-screen">
       <Suspense fallback={<div>Loading...</div>}>
           <LogInForm />
         </Suspense>

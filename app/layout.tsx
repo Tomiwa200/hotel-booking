@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Hotel Booking App",
-  description: "Built by HOTELBOOK",
+  description: "Built by TOMMY",
 };
 
 export default function RootLayout({
@@ -31,7 +31,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Navbar />
-          <main className="w-full">{children}</main>
+          <main className="">{children}</main>
         <Footer />
       </body>
     </html>

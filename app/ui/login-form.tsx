@@ -1,7 +1,6 @@
 "use client";
 
 
-
 import { useActionState } from "react";
 import { useSearchParams } from "next/navigation";
 import { authenticate } from "../lib/action";
@@ -16,13 +15,13 @@ export default function LogInForm() {
   );
   return (
     <form action={formAction}>
-      <div className="max-w-xl mx-auto border border-gray-100 rounded-lg  shadow-sm">
-        <div className="form-title-box block">
-          <h2 className="text-3xl font-bold text-white mt-2 mb-6 text-center">Log In</h2>
+      <div className=" sm:w-xl border border-gray-100 rounded-lg shadow-sm">
+        <div className="form-title-box block ">
+          <h2 className="text-2xl sm:text-3xl sm:py-2 font-bold text-white text-center">Log In</h2>
         </div>
         <div className="input-fields p-4">
              <div className="mb-4">
-          <label htmlFor="email" className="block label text-lg font-medium">
+          <label htmlFor="email" className="block label text-md sm:text-xl font-medium">
             Email:
           </label>
           <input
@@ -30,12 +29,12 @@ export default function LogInForm() {
             id="email"
             name="email"
             placeholder="Enter your email"
-            className="w-full text-gray-600 p-2 rounded-md input-field"
+            className="w-full text-gray-600 p-2 sm:p-4 rounded-md input-field"
             required
           />
         </div>
         <div className="mb-4">
-          <label htmlFor="password" className="block label text-lg font-medium">
+          <label htmlFor="password" className="block label text-md sm:text-xl font-medium">
             Password:
           </label>
           <input
@@ -43,7 +42,7 @@ export default function LogInForm() {
             name="password"
             id="password"
             placeholder="Enter your password"
-            className="w-full text-gray-600 p-2 rounded-md input-field"
+            className="w-full text-gray-600 p-2 sm:p-4 rounded-md input-field"
             required
             minLength={6}
           />
@@ -54,18 +53,18 @@ export default function LogInForm() {
         <button
           type="submit"
           aria-disabled={isPending}
-          className=" submit-btn block mt-2 w-50 px-2 py-2 text-xl mx-auto  text-white font-bold rounded aria-disabled:cursor-not-allowed aria-disabled:opacity-50"
+          className=" submit-btn block w-50 mx-auto text-lg sm:text-2xl py-[5px] sm:py-2 text-white font-bold  rounded aria-disabled:cursor-not-allowed aria-disabled:opacity-50"
         >
           LogIn
         </button>
 
         {errorMessage && (
           <>
-            <p className="text-sm text-red-500">{errorMessage}</p>
+            <p className="text-sm mt-2 text-red-500">{errorMessage}</p>
           </>
         )}
       
-          <p className="nav-text mt-4 mb-4 text-center">Don't have an account? <Link href="/auth/signup" className="ml-2 signup-link hover:underline">SignUp</Link></p> 
+          <p className="nav-text mt-4 mb-4 text-center text-sm">Don't have an account? <Link href="/auth/signup" className="ml-2 signup-link hover:underline">SignUp</Link></p> 
   
         
       </div>

@@ -20,11 +20,11 @@ export default async function Bookings() {
   const bookings = await fetchBookingsByUserId(user_id);
 
   return (
-    <div className="items-container min-h-screen  py-12 px-4 sm:px-6 lg:px-8">
+    <div className="items-container min-h-screen py-12 px-4 sm:px-8">
       <div className="max-w-4xl mx-auto">
         {/* Header */}
         <div className="mb-12">
-          <h1 className=" bookings-header text-4xl font-bold text-gray-900">My Bookings</h1>
+          <h1 className=" bookings-header text-2xl sm:text-4xl font-bold text-gray-900">My Bookings</h1>
           <p className="text-gray-600 mt-1">
             Manage and view all your hotel reservations
           </p>
@@ -44,7 +44,7 @@ export default async function Bookings() {
                 <p className=" font-bold text-gray-600 ">{booking.hotel_location}</p>
                </div>
               
-               <div className="room-container flex  items-center gap-12 mb-10">
+               <div className="room-container flex items-center gap-12 mb-10">
                 <div className="p-4">
                 <p className=" booking-title font-bold text-xl  ">{booking.room_name}</p>
                 <p className=" font-bold  text-gray-600 "> Max Guests: {booking.room_max_guests}</p>

@@ -10,13 +10,13 @@ export default function SignUpForm() {
 const [state, formAction, isPending] = useActionState(signUp, initialState);
     return(
         <form action={formAction}>
-      <div className="max-w-xl mx-auto border border-gray-100 rounded-lg  shadow-sm">
+      <div className="sm:w-xl border border-gray-100 rounded-lg shadow-sm">
         <div className="form-title-box block">
-          <h2 className=" text-3xl font-bold text-white mt-3 mb-6 text-center">Sign Up</h2>
+          <h2 className="  sm:text-3xl sm:py-2 text-2xl font-bold text-white  text-center">Sign Up</h2>
         </div>
         <div className="input-fields p-4">
           <div className="mb-4">
-          <label htmlFor="email" className="block label text-lg font-medium">
+          <label htmlFor="email" className="block label text-md sm:text-xl font-medium">
             Email:
           </label>
           <input
@@ -29,7 +29,7 @@ const [state, formAction, isPending] = useActionState(signUp, initialState);
           />
         </div>
         <div className="mb-4">
-          <label htmlFor="password" className="block label text-lg font-medium">
+          <label htmlFor="password" className="block label text-md sm:text-xl font-medium">
             Password:
           </label>
           <input
@@ -43,7 +43,7 @@ const [state, formAction, isPending] = useActionState(signUp, initialState);
           />
         </div>
         <div className="mb-4">
-          <label htmlFor="name" className="block label text-lg font-medium">
+          <label htmlFor="name" className="block label text-md sm:text-xl font-medium">
             Name:
           </label>
           <input
@@ -59,7 +59,7 @@ const [state, formAction, isPending] = useActionState(signUp, initialState);
         
         <button
           type="submit"
-          className=" submit-btn block mt-4 w-50 px-2 py-2 text-xl mx-auto  text-white font-bold rounded aria-disabled:cursor-not-allowed aria-disabled:opacity-50"
+          className=" submit-btn block mt-4 w-50 mx-auto  sm:text-2xl py-[5px] sm:py-2  text-white font-bold rounded aria-disabled:cursor-not-allowed aria-disabled:opacity-50"
           aria-disabled={isPending}
         >
           SignUp
@@ -69,7 +69,7 @@ const [state, formAction, isPending] = useActionState(signUp, initialState);
             <p className="mt-2 text-sm text-red-500" >
               {state.message}
             </p> )}
-           <p className="nav-text mt-4 mb-4 text-center">Have an account? <Link href="/auth/login" className="ml-2 login-link hover:underline">LogIn</Link></p> 
+           <p className="nav-text mt-4 mb-4 text-center text-sm">Have an account? <Link href="/auth/login" className="ml-2 login-link hover:underline">LogIn</Link></p> 
        
       </div>
     </form>

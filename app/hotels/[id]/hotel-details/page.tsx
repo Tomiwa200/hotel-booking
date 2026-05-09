@@ -25,7 +25,7 @@ export default async function HotelDetails(props: {params: Promise<{id : string 
         className="rounded-lg"
       />
       <div className="hotel-details">
-        <h1 className=" hotel-title text-3xl font-bold">{hotel.name}</h1>
+        <h1 className=" hotel-title text-2xl sm:text-3xl font-bold">{hotel.name}</h1>
         <p className="text-gray-600">{hotel.location}</p>
         <p className="mt-4 text-gray-600">{hotel.description}</p>
         <hr className="title"></hr> 

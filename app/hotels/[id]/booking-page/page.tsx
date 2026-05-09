@@ -23,8 +23,8 @@ export default async function BookingPage(props: {
   }
 
   return (
-    <div className="py-20">
-      <div className="booking-form max-w-2xl mx-auto border border-gray-100 rounded-md shadow-sm">
+    <div className="flex justify-center items-center min-h-screen p-10">
+      <div className="booking-form sm:min-w-xl border border-gray-100 rounded-md shadow-sm">
         <BookingForm user_id={user_id} hotel={hotel} rooms={rooms} />
       </div>
     </div>

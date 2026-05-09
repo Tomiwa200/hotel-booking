@@ -1,6 +1,6 @@
 'use server';
 
-import { signIn } from '@/auth';
+import { auth, signIn, signOut } from '@/auth';
 import { AuthError } from 'next-auth';
 import { revalidatePath } from 'next/cache';
 import { redirect } from 'next/navigation';
@@ -16,7 +16,7 @@ const sql = postgres(process.env.POSTGRES_URL!, { ssl: 'require' });
     room_id: z.string({
       error: 'Please select a room type.',
     }),
-    start_date: z.string(),
+    start_date: z.string() ,
     end_date: z.string(),
   });
 
@@ -55,6 +55,7 @@ export default async function bookHotel(
     end_date: formData.get('end_date'),
   });
 
+  console.log("Incoming booking:", validatedForm.data);
   
   if (!validatedForm.success) {
     const flattenedErrors = z.flattenError(validatedForm.error).fieldErrors;
@@ -123,7 +124,7 @@ export async function signUp(
    }
      redirect('/auth/login');
 }
-
+  
 export async function authenticate(
   prevState: string | undefined,
   formData: FormData,
@@ -142,3 +143,8 @@ export async function authenticate(
     throw error;
   }
 }
+
+ export async function logout() {
+     await signOut({ redirectTo: '/' });
+   }
+ 
