@@ -14,8 +14,8 @@ export default function LogInForm() {
     undefined,
   );
   return (
+    <div className="w-full max-w-lg border border-gray-100 rounded-lg shadow-sm ">
     <form action={formAction}>
-      <div className=" sm:w-xl border border-gray-100 rounded-lg shadow-sm">
         <div className="form-title-box block ">
           <h2 className="text-2xl sm:text-3xl sm:py-2 font-bold text-white text-center">Log In</h2>
         </div>
@@ -65,9 +65,7 @@ export default function LogInForm() {
         )}
       
           <p className="nav-text mt-4 mb-4 text-center text-sm">Don't have an account? <Link href="/auth/signup" className="ml-2 signup-link hover:underline">SignUp</Link></p> 
-  
-        
-      </div>
     </form>
+    </div>
   );
 }

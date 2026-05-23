@@ -9,8 +9,8 @@ export default function SignUpForm() {
     const initialState: SignupState = { message: null, errors: {} };
 const [state, formAction, isPending] = useActionState(signUp, initialState);
     return(
+        <div className="w-full max-w-lg border border-gray-100 rounded-lg shadow-sm">
         <form action={formAction}>
-      <div className="sm:w-xl border border-gray-100 rounded-lg shadow-sm">
         <div className="form-title-box block">
           <h2 className="  sm:text-3xl sm:py-2 text-2xl font-bold text-white  text-center">Sign Up</h2>
         </div>
@@ -70,8 +70,7 @@ const [state, formAction, isPending] = useActionState(signUp, initialState);
               {state.message}
             </p> )}
            <p className="nav-text mt-4 mb-4 text-center text-sm">Have an account? <Link href="/auth/login" className="ml-2 login-link hover:underline">LogIn</Link></p> 
-       
+       </form>
       </div>
-    </form>
     )
 }
