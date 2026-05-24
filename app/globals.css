@@ -65,9 +65,7 @@
   transform: translateX(-50%);
 }
 @media(max-width: 600px) {
-  .nav-links {
-    display: none;
-  }
+  
   .hero-bottom {
       display: none;
   }
