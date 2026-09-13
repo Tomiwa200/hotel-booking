@@ -1,14 +1,6 @@
 # Project Overview
 
-This project is a functional webpage for a **Hotel Booking System** built for my portfolio
-
-**The system visually represents a platform where users can:**
-
-* Register an account and sign in
-* Browse hotel lists
-* View hotel details
-* Book hotel of your choice
-* View bookings made
+This project is a fully functional web application designed as a comprehensive Hotel Booking System, demonstrating end-to-end user workflows from authentication to reservation management. Built for a modern portfolio, the application provides an intuitive platform where users can browse properties, explore room details, and complete room bookings seamlessly.
 
 ## Tech Stack Used
 **NEXTjs Framework**
